@@ -1,0 +1,9 @@
+<div class="mapa-container">
+    <div *ngIf="!locationAccess" class="location-message">
+        Verificando acceso a la ubicación...
+    </div>
+    <div *ngIf="locationAccess && !mapInitialized" class="location-message">
+        Acceso a la ubicación permitido. Cargando mapa...
+    </div>
+    <div id="map" *ngIf="mapInitialized"></div>
+</div>

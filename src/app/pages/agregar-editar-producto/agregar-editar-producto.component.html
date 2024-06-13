@@ -1,0 +1,28 @@
+<div class="agregar-editar-producto-container">
+    <div class="content-box">
+        <h3>{{ isEditMode ? 'Editar Producto' : 'Agregar Producto' }}</h3>
+        <form>
+            <div class="form-group">
+                <label for="nombre">Nombre del Producto</label>
+                <input type="text" id="nombre" placeholder="Nombre del Producto" [(ngModel)]="producto.nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción</label>
+                <textarea id="descripcion" placeholder="Descripción" [(ngModel)]="producto.descripcion" name="descripcion" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="precio">Precio</label>
+                <input type="number" id="precio" placeholder="Precio" [(ngModel)]="producto.precio" name="precio" required>
+            </div>
+            <div class="form-group">
+                <label for="categoria">Categoría</label>
+                <input type="text" id="categoria" placeholder="Categoría" [(ngModel)]="producto.categoria" name="categoria" required>
+            </div>
+            <div class="form-group">
+                <label for="imagen">URL de la Imagen</label>
+                <input type="text" id="imagen" placeholder="URL de la Imagen" [(ngModel)]="producto.imagen" name="imagen" required>
+            </div>
+            <button type="submit">{{ isEditMode ? 'Guardar Cambios' : 'Agregar Producto' }}</button>
+        </form>
+    </div>
+</div>

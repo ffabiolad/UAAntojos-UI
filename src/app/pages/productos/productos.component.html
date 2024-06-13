@@ -1,0 +1,35 @@
+<div class="products-container">
+    <div class="content-box">
+      <h3>Lista de Productos</h3>
+      <div class="filtros">
+        <label for="criterioOrdenacion">Ordenar por:</label>
+        <select id="criterioOrdenacion" [(ngModel)]="criterioOrdenacion" (change)="actualizarValores()">
+          <option value="categoria">Categoría</option>
+          <option value="vendedor">Vendedor</option>
+        </select>
+  
+        <label for="valorOrdenacion" *ngIf="valores.length > 0">{{ criterioOrdenacion | titlecase }}:</label>
+        <select id="valorOrdenacion" [(ngModel)]="valorOrdenacion" *ngIf="valores.length > 0" (change)="ordenarProductos()">
+          <option *ngFor="let valor of valores" [value]="valor">{{ valor }}</option>
+        </select>
+      </div>
+      <div class="products-max">
+        <div class="product-list">
+          @if (productosFiltrados.length > 0) {
+            <div class="product-card" *ngFor="let producto of productosFiltrados">
+              <div class="product-details">
+                <h4 class="product-name">{{ producto.Nombre }}</h4>
+                <p class="product-description">{{ producto.Descripcion }}</p>
+                <p class="product-price">{{ producto.Precio | currency }}</p>
+                <button class="product-button" (click)="anadirAlCarrito(producto)">Añadir al Carrito</button>
+              </div>
+            </div>
+          }@else {
+            <h3>Sin productos</h3>
+          }
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  

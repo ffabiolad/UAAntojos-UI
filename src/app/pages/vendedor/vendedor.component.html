@@ -1,0 +1,15 @@
+<div class="vendedor-container">
+    <h1>Productos del Vendedor</h1>
+    <div class="product-list">
+      <div class="product-card" *ngFor="let product of products">
+        <div class="product-details">
+          <h2 class="product-name">{{ product.name }}</h2>
+          <p class="product-description">{{ product.description }}</p>
+          <p class="product-price">$ {{ product.price | number:'1.2-2' }}</p>
+          <button class="product-button">Ver Detalles</button>
+        </div>
+      </div>
+    </div>
+    <app-loading *ngIf="isLoading"></app-loading>
+  </div>
+  

@@ -1,0 +1,25 @@
+<div class="vendedores-container">
+    <div class="content-box">
+        <h3>Lista de Comercios</h3>
+        <div style="width: 100%;">
+            <input class="search-input" type="text" [(ngModel)]="search" placeholder="Buscar..." (keyup)="filter()">
+        </div>
+        <div class="vendedor-header">
+            <div class="vendedor-column">Nombre</div>
+            <div class="vendedor-column">Campus</div>
+            <!--<div class="vendedor-column">#Ventas</div>-->
+            <div class="vendedor-column">Ver sus productos</div>
+        </div>
+        <div class="vendor-container">
+            <div class="vendedor-row" *ngFor="let comercio of comerciosFilter">
+                <div class="vendedor-column">{{ comercio.NombreComercial }}</div>
+                <div class="vendedor-column" *ngIf="comercio.Edificio"><span class="ver-text">Campus: </span>{{ comercio.Edificio.Nombre ? comercio.Edificio.Nombre : "Sin edificio"  }}  {{ comercio.Edificio.Numero? "Ed." + comercio.Edificio.Numero : ""}}</div>
+                <!--<div class="vendedor-column"><span class="ver-text">Ventas: </span>{{ vendedor.ventas }}</div>-->
+                <div class="vendedor-column">
+                    <!---->
+                    <button class="ver-productos-btn" (click)="verProductos(comercio)">Ver sus productos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
