@@ -1,0 +1,20 @@
+<nav>
+    <input type="checkbox" id="check" #check>
+    <label for="check" class="checkbtn">
+      &#9776;
+    </label>
+    <label class="logo">UAA</label>
+    <label class="logo2">ntojos</label>
+    <ul>
+        <li><a routerLink="/" routerLinkActive="active"  (click)="closeMenu(check)"  [routerLinkActiveOptions]="{ exact: true }">Inicio</a></li>
+        <li><a routerLink="/login" routerLinkActive="active" (click)="closeMenu(check)" [hidden]="!usrActive">Login</a></li>
+        <li><a routerLink="/registro" routerLinkActive="active" (click)="closeMenu(check)" [hidden]="!usrActive">Registro</a></li>
+        <li><a routerLink="/mapa" routerLinkActive="active" (click)="closeMenu(check)">Mapa</a></li>
+        <li><a routerLink="/vendedores" routerLinkActive="active" (click)="closeMenu(check)">Comercios</a></li>
+        <li><a routerLink="/productos" routerLinkActive="active" (click)="closeMenu(check)">Productos</a></li>
+        <li><a routerLink="/ventas" routerLinkActive="active"  (click)="closeMenu(check)" [hidden]="usrActive">Pedidos</a></li>
+        <li><a routerLink="/carrito" routerLinkActive="active" (click)="closeMenu(check)"[hidden]="usrCliente">Carrito</a></li>
+        <li><a routerLinkActive="active" (click)="logout()" [hidden]="usrActive">Cerrar Sesión</a></li>
+    </ul>
+  </nav>
+  

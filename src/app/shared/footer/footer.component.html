@@ -1,0 +1,41 @@
+<footer>
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h1 class="logo">UAA<span class="logo2">ntojos</span></h1>
+        <p>
+            UAAntojos es una plataforma creada para que puedas vender o consumir de algún producto de grado alimenticio dentro de la Universidad, priorizando la agilidad de las compras/ventas y mejorando la calidad del servicio.
+        </p>
+        <div class="contact">
+          <span><i class="fas fa-phone"></i> &nbsp; +123-456-789</span>
+          <span><i class="fas fa-envelope"></i> &nbsp; info&#64;UAAntojos.com</span> <!-- Aquí está el cambio -->
+        </div>
+      </div>
+      <div class="footer-section links">
+        <h2>Links rápidos</h2>
+        <ul>
+          <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a></li>
+          <li><a routerLink="/login" routerLinkActive="active" [hidden]="!usrActive">Login</a></li>
+          <li><a routerLink="/registro" routerLinkActive="active" [hidden]="!usrActive">Registro</a></li>
+          <li><a routerLink="/mapa" routerLinkActive="active" >Mapa</a></li>
+          <li><a routerLink="/vendedores" routerLinkActive="active">Comercios</a></li>
+          <li><a routerLink="/productos" routerLinkActive="active">Productos</a></li>
+          <li><a routerLink="/ventas" routerLinkActive="active" [hidden]="usrActive">Pedidos</a></li>
+          <li><a routerLink="/carrito" routerLinkActive="active" [hidden]="usrCliente">Carrito</a></li>
+          <li><a routerLinkActive="active" (click)="logout()" [hidden]="usrActive">Cerrar Sesión</a></li>
+          </ul>
+      </div>
+      <div class="footer-section social">
+        <h2>Síguenos</h2>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; UAAntojos | Diseñado por ISC
+    </div>
+  </footer>
+  

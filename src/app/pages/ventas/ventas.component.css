@@ -1,0 +1,95 @@
+* {
+  font-family: "Raleway", sans-serif;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.content-box {
+  background-color: #2c3e50;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  padding: 50px 35px;
+  width: 70%;
+  max-width: 90%;
+  margin: 20px;
+  min-height: 600px;
+}
+.sales-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 120px);
+  background: url('https://i.blogs.es/635f55/maps/1366_2000.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 60px 0;
+}
+.content-box * {
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  outline: none;
+  border: none;
+}
+
+.content-box h1 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 38px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+  
+  .sales-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .sale-card {
+    background: #34495e;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(8, 7, 16, 0.6);
+    margin: 10px;
+    padding: 20px;
+    width: 250px;
+    transition: transform 0.3s;
+    text-align: center;
+  }
+  
+  .sale-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .sale-details {
+    padding: 10px;
+  }
+  
+  .sale-product {
+    font-size: 1.5em;
+    margin: 0;
+  }
+  
+  .sale-date, .sale-amount, .sale-buyer {
+    color: #666;
+    font-size: 0.9em;
+    margin: 10px 0;
+  }
+  
+  .sale-button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+  }
+  
+  .sale-button:hover {
+    background-color: #0056b3;
+  }
+  

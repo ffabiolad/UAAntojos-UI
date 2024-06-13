@@ -1,0 +1,19 @@
+
+<div class="sales-container">
+    <div class="content-box">
+      <h1>{{ isVendor ? 'Historial de Ventas' : 'Historial de Compras' }}</h1>
+      <div class="sales-list">
+        <div class="sale-card" *ngFor="let sale of sales">
+          <div class="sale-details">
+            <h2 class="sale-product">{{ sale.idPedido }}</h2>
+            <p class="sale-date">Fecha: {{ sale.fechaEntregado }}</p>
+            <p class="sale-amount">Tienda:  {{ sale.NombreComercial }}</p>
+            <p class="sale-buyer" >Estado del pedido: {{ sale.EstadoPedido ? 'Entregado' : 'Activo' }}</p>
+            <button class="sale-button" (click)="getDetalle(sale.idPedido)">Ver Detalle</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
